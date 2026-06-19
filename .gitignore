@@ -1,0 +1,12 @@
+# Secrets
+.zshenv
+.tmux.env
+.config/opencode/openai-accounts.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Zsh generated
+.zsh_history
+.zshcompdump*

@@ -1,0 +1,19 @@
+# Repo-internal files (don't symlink to $HOME)
+.gitignore
+.stow-local-ignore
+.git
+README.md
+LICENSE
+
+# Secrets (defense in case they end up in repo dir)
+.zshenv
+.tmux.env
+
+# Setup/bootstrap script (run manually on new machines)
+setup.sh
+
+# Example templates (only needed when setting up)
+.zshenv.example
+.tmux.env.example
+README.md
+LICENSE

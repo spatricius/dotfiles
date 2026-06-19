@@ -1,0 +1,4 @@
+[Keyboard]
+KeyRepeat=repeat
+RepeatDelay=500
+RepeatRate=30
