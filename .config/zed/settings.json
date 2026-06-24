@@ -1,5 +1,26 @@
 {
-  "diff_view_style": "split",
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "collaboration_panel": {
+    "dock": "right",
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "dock": "right",
+  },
+  "code_lens": "on",
+  "inlay_hints": {
+    "enabled": true,
+  },
   "base_keymap": "JetBrains",
   "edit_predictions": {
     "provider": "copilot",
@@ -51,6 +72,10 @@
     "PHP": {
       "language_servers": ["intelephense", "!phpactor", "!phptools", "..."],
       "format_on_save": "off",
+      "inlay_hints": {
+        "enabled": true,
+        "show_value_hints": true,
+      },
     },
   },
   "lsp": {
@@ -63,6 +88,6 @@
     },
   },
   "debugger": {
-    "timeout": 600,
+    "timeout": 3000,
   },
 }

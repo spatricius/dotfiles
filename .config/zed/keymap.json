@@ -41,7 +41,7 @@
       "alt-k": "editor::MoveLineUp",
       "alt-h": "pane::ActivatePreviousItem",
       "alt-l": "pane::ActivateNextItem",
-      "f5": "debug_panel::ToggleFocus",
+      "f5": "debug_panel::Toggle",
       "f7": "debugger::StepInto",
       "f8": "debugger::StepOver",
       "f9": "debugger::Continue",
