@@ -10,6 +10,11 @@
     "dock": "right",
   },
   "agent": {
+    "default_model": {
+      "provider": "openrouter",
+      "model": "openrouter/owl-alpha",
+      "enable_thinking": false
+    },
     "dock": "left",
     "favorite_models": [],
     "model_parameters": [],
