@@ -274,4 +274,15 @@
       "ctrl-k": "recent_projects::ToggleActionsMenu",
     },
   },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space t": [
+        "task::Spawn",
+        {
+          "task_name": "Cage2 container shell"
+        }
+      ]
+    }
+  }
 ]

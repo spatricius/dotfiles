@@ -36,6 +36,12 @@
   },
   "vim_mode": true,
   "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    },
     "github-copilot-cli": {
       "type": "registry",
     },
