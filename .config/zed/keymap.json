@@ -11,8 +11,7 @@
       "ctrl-shift-l": "workspace::MovePaneRight",
       "ctrl-shift-j": "workspace::MovePaneDown",
       "ctrl-shift-k": "workspace::MovePaneUp",
-      "\\": "project_panel::ToggleFocus",
-      "space s w": "pane::DeploySearch",
+      "\\ \\": "project_panel::ToggleFocus",
     },
   },
   {
@@ -31,21 +30,14 @@
   {
     "context": "Editor && !menu",
     "bindings": {
-      "ctrl-f": "buffer_search::Deploy", // vim default: page down
+      "space s w": "pane::DeploySearch",
       "ctrl-c": "editor::Copy", // vim default: return to normal mode
       "ctrl-x": "editor::Cut", // vim default: decrement
       "ctrl-v": "editor::Paste", // vim default: visual block mode
       "ctrl-shift-v": "editor::Paste",
-      "ctrl-s": "workspace::Save", // vim default: show signature
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
-      "alt-h": "pane::ActivatePreviousItem",
-      "alt-l": "pane::ActivateNextItem",
-      "f5": "debug_panel::Toggle",
-      "f7": "debugger::StepInto",
-      "f8": "debugger::StepOver",
-      "f9": "debugger::Continue",
-      "f10": "debugger::StepOut",
+      "space space": ["file_finder::Toggle", { "include_ignored": true }]
     },
   },
   {
@@ -53,13 +45,13 @@
     "bindings": {
       "space q": "diagnostics::Deploy",
       "space f": "editor::Format",
-      "space space": "tab_switcher::Toggle",
       "space /": "buffer_search::Deploy",
       "space g g": "git_panel::ToggleFocus",
       "space g b": "git::Blame",
       "space s f": "file_finder::Toggle",
       "space s d": "diagnostics::Deploy",
       "space s c": "command_palette::Toggle",
+      "space s p": "project_symbols::Toggle",
       "space b": "editor::ToggleBreakpoint",
       "g r d": "editor::GoToDefinition",
       "g r r": "editor::FindAllReferences",
@@ -81,41 +73,6 @@
     "context": "vim_mode == insert",
     "bindings": {
       "j k": "vim::NormalBefore",
-    },
-  },
-  {
-    "context": "Dock",
-    "bindings": {
-      "\\": "project_panel::Toggle",
-    },
-  },
-  {
-    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
-    "unbind": {
-      "space s": "outline::Toggle",
-    },
-  },
-  {
-    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
-    "unbind": {
-      "y": "vim::HelixYank",
-    },
-  },
-  {
-    "context": "(vim_mode == helix_normal || vim_mode == helix_select) && !menu",
-    "unbind": {
-      "shift-p": [
-        "vim::HelixPaste",
-        {
-          "before": true,
-        },
-      ],
-    },
-  },
-  {
-    "context": "Picker > Editor",
-    "unbind": {
-      "ctrl-h": "editor::Backspace",
     },
   },
   {
@@ -275,14 +232,9 @@
     },
   },
   {
-    "context": "Editor && vim_mode == normal",
-    "bindings": {
-      "space t": [
-        "task::Spawn",
-        {
-          "task_name": "Cage2 container shell"
-        }
-      ]
+    "context": "vim_mode== normal",
+      "bindings": {
+      "space t": "terminal_panel::Toggle"
     }
   }
 ]
