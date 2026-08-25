@@ -1,5 +1,7 @@
 setopt autocd
 export EDITOR=nvim
+export PATH="$HOME/.opencode/bin:$PATH"
+export PATH=".local/bin:$PATH"
 
 if [[ $- == *i* ]]; then
 
@@ -64,11 +66,14 @@ if [[ $- == *i* ]]; then
   # Shell integrations
   eval "$(fzf --zsh)"
   eval "$(zoxide init --cmd cd zsh)"
-  if command -v oh-my-posh >/dev/null 2>&1; then
-    eval "$(oh-my-posh init zsh --config ~/zsh/catppuccin_frappe.omp.json)"
-  fi
+  eval "$(oh-my-posh init zsh --config https://github.com/JanDeDobbeleer/oh-my-posh/blob/main/themes/catppuccin_frappe.omp.json)"
 fi
 
 
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"
+echo ""
+sh ~/pfetch.sh
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
