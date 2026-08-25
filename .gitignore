@@ -10,3 +10,7 @@ Thumbs.db
 # Zsh generated
 .zsh_history
 .zshcompdump*
+
+# lock files
+.config/nvim/lazy-lock.json
+
