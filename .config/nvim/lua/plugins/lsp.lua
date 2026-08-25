@@ -103,6 +103,9 @@ return {
           filetypes = { 'php' },
           root_dir = helpers.project_root(path),
           capabilities = vim.tbl_deep_extend('force', {}, phpactor_capabilities or {}),
+          init_options = {
+            ['language_server_configuration.auto_config'] = false,
+          },
         }, { bufnr = bufnr })
       end
 
