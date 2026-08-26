@@ -1,4 +1,28 @@
 {
+  "which_key": {
+    "enabled": true,
+    "delay_ms": 100
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "git": {
+    "blame": {
+      "show_avatar": false
+    }
+  },
+  "close_panel_on_toggle": true,
+  "soft_wrap": "editor_width",
+  "gutter": {
+    "min_line_number_digits": 3,
+    "bookmarks": true
+  },
+  "toolbar": {
+    "breadcrumbs": true
+  },
+  "auto_install_extensions": {
+    "xml": true,
+  },
   "diff_view_style": "unified",
   "cli_default_open_behavior": "new_window",
   "file_scan_inclusions": ["vendor/**"],

@@ -12,6 +12,7 @@
       "ctrl-shift-j": "workspace::MovePaneDown",
       "ctrl-shift-k": "workspace::MovePaneUp",
       "\\ \\": "project_panel::ToggleFocus",
+      "f12": "terminal_panel::Toggle",
     },
   },
   {
@@ -41,17 +42,23 @@
     },
   },
   {
+    "context": "GitPanel",
+    "bindings": {
+      "space g g": "git_panel::Close",
+    },
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       "space q": "diagnostics::Deploy",
       "space f": "editor::Format",
       "space /": "buffer_search::Deploy",
       "space g g": "git_panel::ToggleFocus",
-      "space g b": "git::Blame",
+      "space g b": "editor::ToggleGitBlameInline",
       "space s f": "file_finder::Toggle",
       "space s d": "diagnostics::Deploy",
       "space s c": "command_palette::Toggle",
-      "space s p": "project_symbols::Toggle",
+      "space s s": "project_symbols::Toggle",
       "space b": "editor::ToggleBreakpoint",
       "g r d": "editor::GoToDefinition",
       "g r r": "editor::FindAllReferences",
@@ -67,6 +74,16 @@
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
       "space f": "editor::FormatSelections",
+      "g ? s": "editor::ConvertToSnakeCase",
+      "g ? c": "editor::ConvertToLowerCamelCase",
+      "g ? p": "editor::ConvertToUpperCamelCase",
+      "g ? k": "editor::ConvertToKebabCase",
+    },
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "g ?": "vim::ConvertToRot13",
     },
   },
   {
@@ -85,6 +102,12 @@
     "context": "Editor && mode == full",
     "unbind": {
       "ctrl-h": "buffer_search::DeployReplace",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f12": "editor::GoToDefinition",
     },
   },
   {
@@ -121,6 +144,7 @@
     "context": "VimControl && !menu",
     "unbind": {
       "ctrl-j": "vim::Down",
+      "space": "vim::WrappingRight",
     },
   },
   {
@@ -232,9 +256,18 @@
     },
   },
   {
-    "context": "vim_mode== normal",
-      "bindings": {
-      "space t": "terminal_panel::Toggle"
-    }
-  }
+    "context": "vim_mode == normal",
+    "unbind": {
+      "g ?": "vim::PushRot13",
+    },
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "g ? s": "editor::ConvertToSnakeCase",
+      "g ? c": "editor::ConvertToLowerCamelCase",
+      "g ? p": "editor::ConvertToUpperCamelCase",
+      "g ? k": "editor::ConvertToKebabCase",
+    },
+  },
 ]
