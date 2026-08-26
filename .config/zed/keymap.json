@@ -13,6 +13,7 @@
       "ctrl-shift-k": "workspace::MovePaneUp",
       "\\ \\": "project_panel::ToggleFocus",
       "f12": "terminal_panel::Toggle",
+      "shift-f12": "workspace::NewTerminal",
     },
   },
   {
@@ -31,14 +32,12 @@
   {
     "context": "Editor && !menu",
     "bindings": {
-      "space s w": "pane::DeploySearch",
       "ctrl-c": "editor::Copy", // vim default: return to normal mode
       "ctrl-x": "editor::Cut", // vim default: decrement
       "ctrl-v": "editor::Paste", // vim default: visual block mode
       "ctrl-shift-v": "editor::Paste",
       "alt-j": "editor::MoveLineDown",
       "alt-k": "editor::MoveLineUp",
-      "space space": ["file_finder::Toggle", { "include_ignored": true }]
     },
   },
   {
@@ -59,7 +58,14 @@
       "space s d": "diagnostics::Deploy",
       "space s c": "command_palette::Toggle",
       "space s s": "project_symbols::Toggle",
+      "space s w": "pane::DeploySearch",
+      "space space": ["file_finder::Toggle", { "include_ignored": true }],
       "space b": "editor::ToggleBreakpoint",
+      "space c h": [
+        "task::Spawn",
+        { "task_name": "Http request" },
+      ],
+      "space t": ["task::Spawn", { "reveal_target": "center" }],
       "g r d": "editor::GoToDefinition",
       "g r r": "editor::FindAllReferences",
       "g r a": "editor::ToggleCodeActions",
