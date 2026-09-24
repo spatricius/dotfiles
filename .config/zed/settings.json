@@ -23,7 +23,7 @@
   "auto_install_extensions": {
     "xml": true,
   },
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "cli_default_open_behavior": "new_window",
   "file_scan_inclusions": ["vendor/**"],
   "project_panel": {

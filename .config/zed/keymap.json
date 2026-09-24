@@ -43,7 +43,21 @@
   {
     "context": "GitPanel",
     "bindings": {
+      "ctrl-j": "git_panel::FocusEditor",
+      "ctrl-k": "git_panel::FocusChanges",
+    },
+  },
+  {
+    "context": "GitPanel && !(vim_mode == insert)",
+    "bindings": {
       "space g g": "git_panel::Close",
+    },
+  },
+  {
+    "context": "GitPanel && ChangesList && !GitBranchSelector && !GitRepositorySelector",
+    "bindings": {
+      "j": "git_panel::NextEntry",
+      "k": "git_panel::PreviousEntry",
     },
   },
   {
@@ -63,16 +77,19 @@
       "space /": "buffer_search::Deploy",
       "space g g": "git_panel::ToggleFocus",
       "space g b": "editor::ToggleGitBlameInline",
-      "space s f": "file_finder::Toggle",
       "space s d": "diagnostics::Deploy",
       "space s c": "command_palette::Toggle",
       "space s s": "project_symbols::Toggle",
-      "space s w": "pane::DeploySearch",
-      "space space": ["file_finder::Toggle", { "include_ignored": true }],
+      "space s w": ["workspace::SendKeystrokes", "v i w shift-find enter"],
+      "ctrl-shift-f": ["workspace::SendKeystrokes", "v i w shift-find enter"],
       "space b": "editor::ToggleBreakpoint",
       "space c h": [
         "task::Spawn",
         { "task_name": "Http request" },
+      ],
+      "space c f": [
+        "task::Spawn",
+        { "task_name": "PHP-CS-Fixer: fix current file" },
       ],
       "space t": ["task::Spawn", { "reveal_target": "center" }],
       "g r d": "editor::GoToDefinition",
@@ -81,6 +98,15 @@
       "g r n": "editor::Rename",
       "g r i": "editor::GoToImplementation",
       "g r t": "editor::GoToTypeDefinition",
+      "alt-o": "vim::SelectLargerSyntaxNode",
+      "alt-i": "vim::SelectSmallerSyntaxNode",
+    },
+  },
+  {
+    "context": "(!Editor || VimControl) && !(vim_mode == insert)",
+    "bindings": {
+      "space s f": "file_finder::Toggle",
+      "space space": ["file_finder::Toggle", { "include_ignored": true }],
     },
   },
   {
@@ -99,12 +125,6 @@
     "context": "vim_mode == visual",
     "unbind": {
       "g ?": "vim::ConvertToRot13",
-    },
-  },
-  {
-    "context": "vim_mode == insert",
-    "bindings": {
-      "j k": "vim::NormalBefore",
     },
   },
   {
